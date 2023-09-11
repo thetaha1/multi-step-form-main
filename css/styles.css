@@ -31,7 +31,7 @@
   /* Font */
   --ff-ubuntu-bold: "Ubuntu-Bold", sans-serif;
   --ff-ubuntu-Medium: "Ubuntu-Medium", sans-serif;
-  --ff-ubuntu-Regular: "Ubuntu-Regular", sans-serif;
+    --ff-ubuntu-Regular: "Ubuntu-Regular", sans-serif;
   /* Duration Time */
   --dt-main: 0.5s;
   /* Padding */
@@ -50,6 +50,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: var(  --ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
   font-size: 16px;
   background-color: var(--clr-neutral-300, #032861);
   color: var(--clr-neutral-100, #fff);
@@ -132,7 +133,7 @@ aside {
   border: none;
 }
 .step .flex-box .step-num {
-  font-family: var(--ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
+  font-family: var(  --ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
   font-size: 14px;
   color: var(--clr-primary-300, #adbeff);
 }
@@ -155,26 +156,27 @@ aside {
   padding: 10px 0px;
 }
 .form-section .help-text {
-  font-family: var(--ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
+  font-family: var(  --ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
   font-size: 18px;
   color: var(--clr-neutral-500, #9699ab);
   padding-bottom: 30px;
 }
 .form-section label {
-  font-family: var(--ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
-  margin-bottom: 5px;
+  font-family: var(  --ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
+  /* margin-bottom: 10px; */
 }
 .form-section input {
   padding: 15px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  margin-top: 5px;
   border-radius: 9px;
   width: 100%;
 }
 input::placeholder {
   color: var(--clr-neutral-500, #9699ab);
   font-size: 15px;
-  font-family: var(--ff-ubuntu-regular, "Ubuntu-Regular", sans-serif);
+  font-family: var(  --ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
 }
 input[type="submit"] {
   font-family: var(--ff-ubuntu-Medium);
@@ -189,9 +191,7 @@ input[type="submit"] {
   margin-top: 100px;
 }
 input:invalid {
-  border-color: var(
-    --clr-neutral-500
-  );
+  border-color: var(--clr-neutral-500);
 }
 input:focus {
   border-color: #007bff; /* Change the border color when focused */
@@ -200,5 +200,17 @@ input:focus {
 input:valid {
   border-color: #4caf50; /* Change the border color when valid */
 }
-
+.name,
+.email,
+.phone {
+  position: relative;
+}
+.error-message {
+  color: var(--clr-error, #ed3548);
+  font-family: var(--ff-ubuntu-Medium, "Ubuntu-Medium", sans-serif);
+  font-size: 14px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
 /* End Styling */
