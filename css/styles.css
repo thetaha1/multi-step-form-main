@@ -106,7 +106,7 @@ aside {
   padding-top: 40px;
   padding-left: 30px;
   width: 300px;
-  height: 621px;
+  height: 622px;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -144,6 +144,8 @@ aside {
 .form-section {
   color: var(--clr-primary-800, #02295a);
   padding: 40px 100px;
+}
+#myForm {
   display: flex;
   flex-direction: column;
 }
@@ -160,13 +162,14 @@ aside {
 }
 .form-section label {
   font-family: var(--ff-ubuntu-Regular, "Ubuntu-Regular", sans-serif);
-  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 .form-section input {
   padding: 15px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
   border-radius: 9px;
+  width: 100%;
 }
 input::placeholder {
   color: var(--clr-neutral-500, #9699ab);
@@ -183,13 +186,12 @@ input[type="submit"] {
   border: none;
   padding: 15px 30px;
   margin: auto 0 0 auto;
-  margin-top: auto;
-  
+  margin-top: 100px;
 }
 input:invalid {
   border-color: var(
     --clr-neutral-500
-  ); /* Change the border color when invalid */
+  );
 }
 input:focus {
   border-color: #007bff; /* Change the border color when focused */
