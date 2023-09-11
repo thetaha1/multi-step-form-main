@@ -6,5 +6,6 @@ let phoneInput = document.getElementById("phone");
 form.addEventListener("submit", function(event) {
     let isValid = true;
 
-    let nameRegix
+    let nameRegix = /^[A-Za-z]+\s[A-Za-z]+$/;
+
 })
