@@ -6,8 +6,10 @@ const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
 const phoneError = document.getElementById("phoneError");
 
-// Name Validation onBlur
-nameInput.addEventListener("blur", function () {
+
+
+// Name Validation on Input
+nameInput.addEventListener("input", function () {
   const nameValue = nameInput.value.trim();
   const nameWords = nameValue.split(" ");
   if (nameWords.length < 2) {
@@ -16,12 +18,9 @@ nameInput.addEventListener("blur", function () {
     nameError.textContent = "";
   }
 });
-nameInput.addEventListener("focus", function () {
-  nameError.textContent = "";
-});
 
-// Email Validation onBlur
-emailInput.addEventListener("blur", function () {
+// Email Validation on Input
+emailInput.addEventListener("input", function () {
   const emailValue = emailInput.value.trim();
   if (!isValidEmail(emailValue)) {
     emailError.textContent = "Please enter a valid email address.";
@@ -29,21 +28,15 @@ emailInput.addEventListener("blur", function () {
     emailError.textContent = "";
   }
 });
-emailInput.addEventListener("focus", function () {
-  emailError.textContent = "";
-});
 
-// Phone Validation onBlur
-phoneInput.addEventListener("blur", function () {
+// Phone Validation on Input
+phoneInput.addEventListener("input", function () {
   const phoneValue = phoneInput.value.trim();
   if (!isValidPhoneNumber(phoneValue)) {
     phoneError.textContent = "Please enter a valid phone number.";
   } else {
     phoneError.textContent = "";
   }
-});
-phoneInput.addEventListener("focus", function () {
-  phoneError.textContent = "";
 });
 
 form.addEventListener("submit", function (event) {

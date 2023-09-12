@@ -213,4 +213,8 @@ input:valid {
   bottom: 0px;
   left: 0px;
 }
+.error {
+  border: 1px solid red; /* Change the border color to red for invalid input */
+}
+
 /* End Styling */
